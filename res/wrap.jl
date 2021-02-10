@@ -1,13 +1,7 @@
 using Clang
+using flux_core_jll
 
-if length(ARGS) != 1
-  error("Pass the path to the Flux headers as the first argument")
-end
-
-header_dir = ARGS[1]
-isdir(header_dir) || error("$header_dir does not exist")
-
-const FLUX_INCLUDE = normpath(header_dir)
+const FLUX_INCLUDE = normpath(joinpath(flux_core_jll.artifact_dir, "include") |> normpath)
 
 # Fails with `include/flux/core/barrier.h:24:1: error: unknown type name 'flux_future_t'`
 # as far as I can tell `barrier.h` is not including `future.h`

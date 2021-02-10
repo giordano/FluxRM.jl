@@ -4,6 +4,7 @@ version = "0.1.0"
 
 [deps]
 CEnum = "fa961155-64e5-5f13-b03f-caf6b980ea82"
+flux_core_jll = "381ff186-7949-5def-80e3-c2e748080dc1"
 
 [compat]
 CEnum = "0.4"

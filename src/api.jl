@@ -1,9 +1,6 @@
 module API
 
-# using Flux_jll
-
-# temporary hack
-const libflux_core = "libflux-core"
+using flux_core_jll
 
 using CEnum
 
